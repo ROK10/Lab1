@@ -1,15 +1,32 @@
-.bl-background {
+
+.bl-body{
+    padding-top: 100px;
     background: #cdcbcb;
-    padding: 20px;
+    border-bottom: auto;
+    margin:	auto;
+    width:	100%;
+    
+}
+.bl-background {
+    width:	100%;
+    height: 500px;
+    max-width: 1000px;
+    margin:	auto;
+
+    
 }
 
 .bl-list {
+    float: left;
+    padding:	10px;
     background: white;
     margin-bottom: 10px;
 }
 
 .bl-bought {
     background: white;
+    float:	right;
+    padding:	10px;
 }
 
 /*Кнопки*/
