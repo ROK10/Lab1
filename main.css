@@ -1,35 +1,72 @@
-body {
-   background: #cdcbcb;
+.Site {
+    background: #cdcbcb;
+    height: 100%;
 }
 .bl-body{
+    display: flex;
+	flex-direction: column;
+    width: 933px;
     padding-top: 100px;
     margin-left:	auto;
     margin-right:	auto;
-    max-width:	1000px;
+    max-width: 100%;
+    flex: 1;
+    
 }
 .bl-background {
+    display: flex;
+    align-items: stretch;
+    position: relative;
     width:	100%;
-    height: 210px;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
+.bl-column1 {
+    vertical-align: top;
+    display: inline-block;
+    width:	68%;
+    padding: 14px;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 390px;
+    flex-grow: 1;
+}
+.bl-column2 {
+    vertical-align: top;
+    float: right;
+    display: inline-block;
+    width:	32%;
+    padding: 14px;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 220px;
+    flex-grow: 2;
+}
 .bl-list {
-    width:	63%;
-    float: left;
+    display: block;
+    width:	auto;
     height: 100%;
     background: white;
     position: relative;
     border-radius: 4px;
     box-sizing: border-box;
-    min-width: 430px;
-    margin-right: 2%;
-    margin-bottom: 4%;
+}
+.bl-stock{
+    display: block;
+    width:	auto;
+    background: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
+    height: auto;
 }
 .bl-searchline {
     padding: 13px;
     height: 19%;
-    border-bottom-color: #cdcbcb;
-    border-bottom-width: 1px;
-    border-bottom-style: inset;
 }
 .bl-search {
     height: 100%;
@@ -67,45 +104,33 @@ body {
     border-left-width: 1px;
     text-align: start;
 }
-.bl-firstline {
-    height: 22%;
+.bl-line {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 45px;
     border-bottom-color: #cdcbcb;
-    border-bottom-width: 1px;
-    border-bottom-style: inset;
-}
-.bl-secondline {
-    height: 22%;
-    border-bottom-color: #cdcbcb;
-    border-bottom-width: 1px;
-    border-bottom-style: inset;
-}
-.bl-thirdline {
-    height: 22%;
+    border-top-width: 1px;
+    border-top-style: inset;
 }
 
 .bl-firstText {
     padding: 13px;
     height: 20px;
-    float: left;
     width:	15%;
-    margin: left;
-    margin-right: 5%;
 }
 
 .bl-firstCentral {
     padding: 5px;
     padding-right: 5px;
     height: 78%;
-    float: left;
     width:	130px;
-    margin-left: 10%;
     box-sizing: border-box;
 }
 .bl-firstEnd {
     padding-right: 14px;
     padding-top: 5px;
     height: 78%;
-    float: right;
     width:	130px;
 }
 .bl-firstMinus {
@@ -174,20 +199,6 @@ body {
     border-right-width: 0px;
     border-top-width: 0px;
 }
-.bl-stock{
-    width:	32%;
-    min-width: 250px;
-    min-height: 90%;
-    background: white;
-    float:	left;
-    border-radius: 4px;
-    margin-left: 2%;
-    box-sizing: border-box;
-    flex-direction: column;
-    position: relative;
-    height: auto;
-}
-
 
 .bl-rest {
     height: auto;
@@ -249,4 +260,85 @@ body {
     height: 19px;
     text-align: center;
     padding-top: 1px;
+}
+.bl-badge {
+    background: rgba(163, 24, 204, 0.94);
+    width: 150px;
+    height: 130px;
+    bottom: -80px;
+    left: 20px;
+    position: fixed;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: all 1s ease;
+}
+
+.bl-badge:hover {
+    background: #5f24ff;
+    transform: translateY(-80px);
+}
+
+.bl-buy-list {
+    color: white;
+    margin: 25px;
+    margin-top: 15px;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+.bl-created-by {
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.bl-name {
+    font-size: 20px;
+    display: block;
+}
+
+@media print {
+    .badge {
+        padding-top: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        bottom: 1px;
+        height: 80px;
+        border: black solid 4px;
+    }
+
+    .buy-list {
+        display: none;
+    }
+
+    .created-by {
+        color: black;
+        background: white;
+
+    }
+}
+button::after {
+    background: #A318CC;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    content: attr(data-tooltip);
+    margin-left: -40px;
+    margin-top: -38px;
+    opacity: 0;
+    transform: scale(0);
+    padding: 7px 7px;
+    position: absolute;
+    visibility: hidden;
+    font-weight: normal;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+button:hover:after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
