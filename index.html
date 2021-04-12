@@ -7,22 +7,23 @@
 
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
-<body>
+<body class="Site">
 <div class="bl-body"> 
     <div class="bl-background">
+        <div class="bl-column1">
         <div class="bl-list">
             <div class="bl-searchline">
                 <div class="bl-search">
                     <input type ="text" name="nameInput" placeholder="Назва товару" class="bl-input">
-                    <button	class="bl-add">Додати</button>
+                    <button	class="bl-add" data-tooltip="Додати товар до списку">Додати</button>
                 </div>
             </div>
-            <div class="bl-firstline">
+            <div class="bl-line">
                     <div class="bl-firstText">
                         Помідори
                     </div>
                     <div class="bl-firstCentral">
-                        <button	class="bl-firstMinus">-</button>
+                        <button	class="bl-firstMinus" data-tooltip="Відняти 1">-</button>
                         <div class="bl-firstNumberBorder">
                             <div class="bl-firstNumberBackground">
                                 <div class="bl-firstNumber">
@@ -30,54 +31,56 @@
                                 </div>
                             </div>
                         </div>
-                        <button	class="bl-firstPlus">+</button>
+                        <button	class="bl-firstPlus" data-tooltip="Додати 1">+</button>
                     </div>
                     <div class="bl-firstEnd">
-                        <button	class="bl-firstDelete">X</button>
-                        <button	class="bl-firstBought">Куплено</button>
+                        <button	class="bl-firstDelete" data-tooltip="Видалити зі списку">X</button>
+                        <button	class="bl-firstBought" data-tooltip="Купити">Куплено</button>
                     </div>
             </div>
-            <div class="bl-secondline">
+            <div class="bl-line">
                 <div class="bl-firstText">
                         Печиво
                     </div>
                     <div class="bl-firstCentral">
-                        <button	class="bl-firstMinus">-</button>
+                        <button	class="bl-firstMinus" data-tooltip="Відняти 1">-</button>
                         <div class="bl-firstNumberBorder">
                             <div class="bl-firstNumberBackground">
                                 <div class="bl-firstNumber">
-                                    0
+                                    1
                                 </div>
                             </div>
                         </div>
-                        <button	class="bl-firstPlus">+</button>
+                        <button	class="bl-firstPlus" data-tooltip="Додати 1">+</button>
                     </div>
                     <div class="bl-firstEnd">
-                        <button	class="bl-firstDelete">X</button>
-                        <button	class="bl-firstBought">Куплено</button>
+                        <button	class="bl-firstDelete" data-tooltip="Видалити зі списку">X</button>
+                        <button	class="bl-firstBought" data-tooltip="Купити">Куплено</button>
                     </div>
             </div>
-            <div class="bl-thirdline">
+            <div class="bl-line">
                 <div class="bl-firstText">
                         Яблука
                     </div>
                     <div class="bl-firstCentral">
-                        <button	class="bl-firstMinus">-</button>
+                        <button	class="bl-firstMinus" data-tooltip="Відняти 1">-</button>
                         <div class="bl-firstNumberBorder">
                             <div class="bl-firstNumberBackground">
                                 <div class="bl-firstNumber">
-                                    2
+                                    1
                                 </div>
                             </div>
                         </div>
-                        <button	class="bl-firstPlus">+</button>
+                        <button	class="bl-firstPlus" data-tooltip="Додати 1">+</button>
                     </div>
                     <div class="bl-firstEnd">
-                        <button	class="bl-firstDelete">X</button>
-                        <button	class="bl-firstBought">Куплено</button>
+                        <button	class="bl-firstDelete" data-tooltip="Видалити зі списку">X</button>
+                        <button	class="bl-firstBought" data-tooltip="Купити">Куплено</button>
                     </div>
             </div>
         </div>
+        </div> 
+        <div class="bl-column2">
         <div class="bl-stock">
             <div class="bl-rest">
                 <div class="bl-title">Залишилося</div>
@@ -121,8 +124,13 @@
             </div>
             <div class="bl-bought"></div>
         </div>
+    </div> 
     </div>
 </div> 
-
+    <div class="bl-badge"><span class="bl-buy-list">Buy List</span>
+        <span class="bl-created-by">Created by: <span class="bl-name">Rostyslav Kyryniachenko</span></span>
+    </div>
+<script type="text/javascript" src="sourse.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
